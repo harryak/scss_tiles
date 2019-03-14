@@ -22,7 +22,7 @@ Feel free to tinker with the `src/scss/tiles.scss`. If you've found an improveme
 
 ## Reference
 
-Refer to the `dist/example-##.html` files.
+Refer to the `docs/example-##.html` files.
 
 When using SCSS tiles, one has to use a specific HTML structure for it to work:
 

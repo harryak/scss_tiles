@@ -47,6 +47,7 @@
 
     .content {
       // Basic settings. The position is important for squaredness.
+      display: block;
       position: absolute;
       top: 0;
       left: 0;

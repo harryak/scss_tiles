@@ -66,3 +66,19 @@ The tiles can have full-size background images. Just assign the CSS-property `ba
 *DON'T* assign the background to the `tile` container, this breaks the intended structure.
 
 Refer to `dist/example-01.html` for this.
+
+### Hover animations
+
+*NOTICE:* There's a bug in Chrome executing the transitions on page loading a first time (this looks ugly).
+To circumvent this, add a `<script>` tag with a space to your body, if no javascript is yet embedded.
+```html
+<script> </script>
+``` 
+
+The following hover animations are available via including:
+
+#### Flip animation
+
+A simple flip animation (rotating 180 degree around the Y axis), showing an empty backface or an explicitly set backface when complete.
+
+To set an explicit backface, add the class `tile-two-sided` to the desired `tile`. Now you can add a second `content` container with the additional class `back`, containing everything that will be on the back of the tile. See `docs/example-02.html` for an example.

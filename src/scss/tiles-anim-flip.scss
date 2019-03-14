@@ -9,11 +9,13 @@
   perspective: 150vw;
 
   .tile {
+    // Add flip animation possibility to content.
     .content {
       transition: transform 1s;
       transform-style: preserve-3d;
     }
 
+    // Add standard backside.
     &::after {
       content: "";
       display: block;
@@ -22,6 +24,7 @@
       left: 0;
       height: 100%;
       width: 100%;
+      overflow: hidden;
       background: $tileStdBgColor;
 
       transform: rotateY(-180deg);
@@ -30,6 +33,7 @@
       transform-style: preserve-3d;
     }
 
+    // Add flip animation to standard build.
     &:hover {
       .content {
         transform: rotateY(180deg);
@@ -37,6 +41,24 @@
 
       &::after {
         transform: rotateY(0deg);
+      }
+    }
+
+    // Overwrite for explicit two-sided tile.
+    &.two-sided {
+      .content.back {
+        transform: rotateY(-180deg);
+        backface-visibility: hidden;
+      }
+
+      &:hover {
+        .content.back {
+          transform: rotateY(0deg);
+        }
+      }
+
+      &::after {
+        display: none;
       }
     }
   }

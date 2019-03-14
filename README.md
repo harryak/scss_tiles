@@ -11,6 +11,9 @@ Please have a look at the LICENSE file.
 
 You can just download the `dist/tiles.css` and use it locally right away.
 
+Add the `dist/tiles-anim-*.css` you like the most to add hover animations.
+Some provide special features (see below).
+
 ### Advanced usage
 
 Clone this repo and setup gulp to run the gulp tasks (at least `sass-default`).

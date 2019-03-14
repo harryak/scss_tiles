@@ -1,0 +1,43 @@
+/*!
+ * TERMS OF USE - SCSS TILES
+ * @license Licensed under the GPLv3. See LICENSE file for full license.
+ * Copyright(c) 2019 Felix Rossmann
+ */
+@import 'config';
+
+.tiles-container {
+  perspective: 150vw;
+
+  .tile {
+    .content {
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $tileStdBgColor;
+
+      transform: rotateY(-180deg);
+      backface-visibility: hidden;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    &:hover {
+      .content {
+        transform: rotateY(180deg);
+      }
+
+      &::after {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+}

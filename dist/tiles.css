@@ -1,0 +1,1 @@
+.tiles-container,.tiles-container *{box-sizing:border-box}.tiles-container{grid-template-columns:repeat(4,1fr)}

@@ -1,0 +1,32 @@
+{
+  "name": "scss_tiles",
+  "version": "0.0.1",
+  "description": "A SCSS package for CSS square tiles.",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harryak/scss_tiles.git"
+  },
+  "keywords": [
+    "scss",
+    "tiles",
+    "css",
+    "tile",
+    "square"
+  ],
+  "author": "Felix Rossmann",
+  "license": "SEE LICENSE FILE",
+  "bugs": {
+    "url": "https://github.com/harryak/scss_tiles/issues"
+  },
+  "homepage": "https://github.com/harryak/scss_tiles#readme"
+}

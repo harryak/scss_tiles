@@ -5,10 +5,50 @@
 @import 'config';
 
 .tiles-container {
+  // Setup CSS grid.
+  display: grid;
   grid-template-columns: repeat($gridRows, 1fr);
+  grid-gap: $gridGapX $gridGapY;
+
+  // Reset for box-sizing.
   box-sizing: border-box;
 
+  // Reset for box-sizing.
   * {
     box-sizing: border-box;
+  }
+
+  .tile {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    &.tile-2-1 {
+      grid-column: span 2;
+
+      &::before {
+        padding-top: 50%;
+      }
+    }
+
+    &.tile-2-2 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
   }
 }

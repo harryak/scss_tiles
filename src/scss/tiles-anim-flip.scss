@@ -45,7 +45,7 @@
     }
 
     // Overwrite for explicit two-sided tile.
-    &.two-sided {
+    &.tile-two-sided {
       .content.back {
         transform: rotateY(-180deg);
         backface-visibility: hidden;

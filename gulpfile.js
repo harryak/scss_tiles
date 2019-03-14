@@ -11,7 +11,8 @@ gulp.task('sass-default', function () {
             browsers: ['last 2 versions']
         }))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('docs'));
 });
 
 gulp.task('sass-watch', function () {

@@ -82,3 +82,7 @@ The following hover animations are available via including:
 A simple flip animation (rotating 180 degree around the Y axis), showing an empty backface or an explicitly set backface when complete.
 
 To set an explicit backface, add the class `tile-two-sided` to the desired `tile`. Now you can add a second `content` container with the additional class `back`, containing everything that will be on the back of the tile. See `docs/example-02.html` for an example.
+
+#### Shrink animation
+
+A *shrinking* animation: The tile gets smaller (5px on each side), but the content stays the same size.

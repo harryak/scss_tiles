@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example for SCSS tiles by harryak</title>
+
+    <link rel="stylesheet" href="tiles.css">
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: darkgray;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tiles-container .content {
+            background-color: white;
+        }
+
+        .white-text {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="tiles-container">
+            <div class="tile tile-1-3">
+                <div class="content white-text" style="background-image: url('cat_black-bg.jpg');">
+                    <h1>Headline h1</h1>
+                    This can contain all HTML tags.
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content">
+                    <p>This is a paragraph.</p>
+                    <a href="#">And a link</a>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content white-text" style="background-image: url('cat_black-bg.jpg');">
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content">
+                    <h2>Smaller headline h2</h2>
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile tile-2-1">
+                <div class="content">
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content">
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content">
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile tile-2-2">
+                <div class="content white-text" style="background-image: url('cat_black-bg.jpg');">
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content">
+                    Some very basic content.
+                </div>
+            </div>
+            <div class="tile">
+                <div class="content">
+                    Some very basic content.
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

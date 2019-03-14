@@ -1,3 +1,8 @@
-$gridRows: 4;
+$gridCols: 4;
 $gridGapX: 25px;
 $gridGapY: 25px;
+
+$tileSizeMaxCols: 4;  // This, obviously, shouldn't be larger than $gridCols
+$tileSizeMaxRows: 4;
+
+$tileInnerPadding: 25px;

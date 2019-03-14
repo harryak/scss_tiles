@@ -1,13 +1,14 @@
-/**
+/*!
+ * TERMS OF USE - SCSS TILES
+ * @license Licensed under the GPLv3. See LICENSE file for full license.
  * Copyright(c) 2019 Felix Rossmann
- * See LICENSE file for license.
  */
 @import 'config';
 
 .tiles-container {
   // Setup CSS grid.
   display: grid;
-  grid-template-columns: repeat($gridRows, 1fr);
+  grid-template-columns: repeat($gridCols, 1fr);
   grid-gap: $gridGapX $gridGapY;
 
   // Reset for box-sizing.
@@ -19,36 +20,51 @@
   }
 
   .tile {
+    // Basic settings for tiles.
     height: 100%;
     width: 100%;
     position: relative;
 
+    // "Hack" to get the tiles square.
     &::before {
       content: '';
       display: block;
       padding-top: 100%;
     }
 
-    &.tile-2-1 {
-      grid-column: span 2;
+    @for $col from 1 to $tileSizeMaxCols {
+      @for $row from 1 to $tileSizeMaxRows {
+        &.tile-#{$col}-#{$row} {
+          grid-column: span $col;
+          grid-row: span $row;
 
-      &::before {
-        padding-top: 50%;
+          &::before {
+            padding-top: ($row) / ($col) * 100%;
+          }
+        }
       }
     }
 
-    &.tile-2-2 {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-
     .content {
+      // Basic settings. The position is important for squaredness.
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
       overflow: hidden;
+
+      // Prepare for a possible background image.
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      padding: $tileInnerPadding;
+
+      // We don't need the first elements to have an extra margin to top.
+      :first-child {
+        margin-top: 0;
+      }
     }
   }
 }

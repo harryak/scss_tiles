@@ -1,0 +1,22 @@
+/*!
+ * TERMS OF USE - SCSS TILES
+ * @license Licensed under the GPLv3. See LICENSE file for full license.
+ * Copyright(c) 2019 Felix Rossmann
+ */
+@import 'config';
+
+.tiles-container {
+  .tile {
+    .content {
+      transition: .3s width, .3s height, .3s margin, .3s padding;
+    }
+    &:hover {
+      .content {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        margin: 5px;
+        padding: 20px;
+      }
+    }
+  }
+}

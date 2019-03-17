@@ -69,7 +69,7 @@ These are named like `tile-<column span>-<row span>`, e.g. `tile-3-2` spans thre
 
 You can easily assign colors to the `.tiles .content`-selector.
 
-This is the intended structure! Do not assign background-colors to the `.tiles`-class (see below for details).
+*NOTICE:* This is the intended structure! Do not assign background-colors to the `.tiles`-class (see below for details).
 
 ### Background images
 
@@ -77,6 +77,32 @@ The tiles can have full-size background images. Just assign the CSS-property `ba
 *DON'T* assign the background to the `tile` container, this breaks the intended structure.
 
 Refer to `dist/example-01.html` for this.
+
+### Responsiveness
+
+Similar to the [Bootstrap 4 grid logic](https://getbootstrap.com/docs/4.1/layout/grid/) it is possible to include multiple classes for different breakpoints.
+
+E.g. you can build something like:
+```html
+<div class="tiles-container tiles-container-2 tiles-container-md-4 tiles-container-xl-8">
+    <div class="tile tile-2-1 tile-md-4-2 tile-xl-6-3">
+        <div class="content">
+            some HTML content
+        </div>
+    </div>
+</div>
+```
+
+The grid can be used for up to 12 columns (please look out to match the tile sizes), and the following breakpoints are predefined:
+
+| name | suffix| &geq; px |
+|------|-------|-----------------|
+| x-small | - | 0 |
+| small | sm | 576 |
+| medium | md | 768 |
+| large | lg | 992 |
+| x-large | xl | 1200 |
+| xx-large | xxl | 1600 |
 
 ### Hover animations
 

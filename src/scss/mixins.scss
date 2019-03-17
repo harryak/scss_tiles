@@ -1,0 +1,11 @@
+@import 'config';
+
+// Creates media-query for given breakpoint.
+@mixin screenWidth($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {} // Do not output anything.
+}

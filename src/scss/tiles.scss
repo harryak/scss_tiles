@@ -4,6 +4,7 @@
  * Copyright(c) 2019 Felix Rossmann
  */
 @import 'config';
+@import 'mixins';
 
 .tiles-container {
   // Setup CSS grid.
@@ -32,19 +33,6 @@
       padding-top: 100%;
     }
 
-    @for $col from 1 to $tileSizeMaxCols {
-      @for $row from 1 to $tileSizeMaxRows {
-        &.tile-#{$col}-#{$row} {
-          grid-column: span $col;
-          grid-row: span $row;
-
-          &::before {
-            padding-top: ($row) / ($col) * 100%;
-          }
-        }
-      }
-    }
-
     .content {
       // Basic settings. The position is important for squaredness.
       display: block;
@@ -65,6 +53,53 @@
       // We don't need the first elements to have an extra margin to top.
       :first-child {
         margin-top: 0;
+      }
+    }
+
+    @for $col from 1 to $tileSizeMaxCols {
+      @for $row from 1 to $tileSizeMaxRows {
+        &.tile-#{$col}-#{$row} {
+          grid-column: span $col;
+          grid-row: span $row;
+
+          &::before {
+            padding-top: ($row) / ($col) * 100%;
+          }
+        }
+      }
+    }
+    // Add media queries for different grid sizes.
+    @each $breakpoint, $screenWidth in $breakpoints {
+      @include screenWidth($breakpoint) {
+        @for $col from 1 to $tileSizeMaxCols {
+          @for $row from 1 to $tileSizeMaxRows {
+            &.tile-#{$breakpoint}-#{$col}-#{$row} {
+              grid-column: span $col;
+              grid-row: span $row;
+
+              &::before {
+                padding-top: ($row) / ($col) * 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Add different grid sizes for easier access.
+  @for $colCount from 1 to $gridColsMax + 1 {
+    &.tiles-container-#{$colCount} {
+      grid-template-columns: repeat($colCount, 1fr);
+    }
+  }
+  // Add media queries for different grid sizes.
+  @each $breakpoint, $screenWidth in $breakpoints {
+    @include screenWidth($breakpoint) {
+      @for $colCount from 1 to $gridColsMax + 1 {
+        &.tiles-container-#{$breakpoint}-#{$colCount} {
+          grid-template-columns: repeat($colCount, 1fr);
+        }
       }
     }
   }

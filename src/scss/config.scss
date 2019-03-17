@@ -1,10 +1,17 @@
+// Default settings without using extra classes.
 $gridCols: 4;
+$gridColsMax: 12;
 $gridGapX: 5px;
 $gridGapY: 5px;
 
+// How many cols/rows one tile could span at max.
 $tileSizeMaxCols: 4;  // This, obviously, shouldn't be larger than $gridCols
 $tileSizeMaxRows: 4;
 
 $tileInnerPadding: 25px;
 
+// Color for the backside of tiles.
 $tileStdBgColor: #ffffff;
+
+// Values denote the minimum screen width for rules to apply.
+$breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1600px);

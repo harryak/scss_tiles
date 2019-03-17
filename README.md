@@ -1,7 +1,18 @@
 # SCSS tiles
+
 Classes for square (and rectangular) boxes, optionally with some content.
 
 *NOTICE:* The tiles do not have any colors assigned. 
+
+## Examples
+
+You can view examples at GitHub.io:
+* [Example 00: Most basic features](https://harryak.github.io/scss_tiles/example-00.html)
+* [Example 01: More advanced features](https://harryak.github.io/scss_tiles/example-01.html)
+* [Example 02: Flip animation](https://harryak.github.io/scss_tiles/example-02.html)
+* [Example 03: Shrink animation](https://harryak.github.io/scss_tiles/example-03.html)
+
+![Example 01](https://harryak.github.io/scss_tiles/example-01.jpg)
 
 ## Usage
 

@@ -5,15 +5,15 @@ Classes for square (and rectangular) boxes, optionally with some content.
 *NOTICE:* The tiles do not have any colors assigned. 
 
 Table of contents:
-0. [Examples](#examples)
-0. [Usage](#usage)
-0. [Reference](#reference)
-   0. [Base structure](#base-structure)
-   0. [Tile classes](#tile-classes)
-   0. [Colors and background colors](#colors-and-background-colors)
-   0. [Background images](#background-images)
-   0. [Responsiveness](#responsiveness)
-   0. [Hover animations](#hover-animations)
+1. [Examples](#examples)
+2. [Usage](#usage)
+3. [Reference](#reference)
+   1. [Base structure](#base-structure)
+   2. [Tile classes](#tile-classes)
+   3. [Colors and background colors](#colors-and-background-colors)
+   4. [Background images](#background-images)
+   5. [Responsiveness](#responsiveness)
+   6. [Hover animations](#hover-animations)
 
 ## Examples
 
